@@ -15,6 +15,8 @@ def read_temperature():
     temp = temp_raw.rstrip()
     temp_list = re.split('C|F|:| ', temp)
 
+    print(temp_list)
+
     temp_cel, temp_fahren = temp_list[3], temp_list[6]
 
     date_temp = ("{}\n"+"{}"+u"\N{DEGREE SIGN}C"+"\n{}"+u"\N{DEGREE SIGN}F").format(time.strftime('%H:%M:%S'), temp_cel, temp_fahren)
